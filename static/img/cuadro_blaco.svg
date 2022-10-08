@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="348" height="560" viewBox="0 0 348 560">
+  <defs>
+    <filter id="Rectángulo_2" x="0" y="0" width="348" height="560" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.369"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectángulo_2)">
+    <g id="Rectángulo_2-2" data-name="Rectángulo 2" transform="translate(9 6)" fill="#fff" stroke="#fff" stroke-width="3">
+      <rect width="330" height="542" rx="38" stroke="none"/>
+      <rect x="1.5" y="1.5" width="327" height="539" rx="36.5" fill="none"/>
+    </g>
+  </g>
+</svg>

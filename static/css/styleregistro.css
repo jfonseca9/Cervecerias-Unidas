@@ -1,0 +1,28 @@
+
+
+#botonactivo{
+    height: 100px;
+    background-color: #172532;
+    border: 0px;
+    width: 100%;
+}
+
+#botonactivo:hover {
+    background-color: #233547;
+    width: 100%;
+}
+#registro{
+font: normal normal  17px Roboto Slab;
+}
+
+#botonguardar{
+    background-color: #172532;
+    border: 0px;
+    color: rgb(255, 255, 255);
+    
+}
+
+#botonguardar:hover {
+    background-color: #F0730D;
+    
+}

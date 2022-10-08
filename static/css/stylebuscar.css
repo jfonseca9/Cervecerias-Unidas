@@ -1,0 +1,62 @@
+
+
+.container{
+    position: relative;
+    top: 95px;
+    width: 100%;
+    height: 500px;
+    left: 15px;
+    border-radius: 15px;
+    background-color:#FFFFFF ;
+    box-shadow: 0px 3px 6px #0000003B;
+    padding: 30px;
+}
+
+.brand-logo{
+    width: 172px;
+    height: 143px;
+    background: transparent url('/static/img/logo_color.svg') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    margin-top: 52px;
+    margin: auto;
+    animation-name: animacion;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    }
+    @keyframes animacion{
+        0%{
+            transform: translateY(0%);
+        }25%{
+            transform: translateY(10%);
+        }50%{
+            transform: translateY(15%);
+        }
+    
+    }
+
+    #buscar{
+        padding-top: 30px;
+        text-align: center;
+    }
+
+    #botonbuscar{
+        background-color: #172532;
+        border: 0px;
+    }
+
+    #botonbuscar:hover {
+        background-color: #F0730D;
+    }
+
+    #botonactivo{
+        height: 100px;
+        background-color: #172532;
+        border: 0px;
+        width: 100%;
+    }
+
+    #botonactivo:hover {
+        background-color: #233547;
+    }

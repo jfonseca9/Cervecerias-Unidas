@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cervezas Unidas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylelogin.css') }}">
+</head>
+
+<body>
+
+    <header></header>
+    <footer><br>¿No tienes cuenta? contacta a un administrador</footer>
+    
+    <div class="figura_fondo">
+    </div>
+    <div class="container">
+        <div class="brand-logo"></div>
+        <div class="brand-title">Ingreso de empleados</div>
+        <form name="logForm" id="logForm" action="" method="post" novalidate>  
+            {{ form.hidden_tag() }}                   
+            <div class="inputs">
+                {{ form.emailLogin.label }}
+                {{ form.emailLogin }}
+                {% for error in form.emailLogin.errors %}
+                <span style="color: red; font-size: 12px;">{{ error }}</span>
+                {% endfor %} 
+                <br>
+                {{ form.passwordLogin.label }}
+                {{ form.passwordLogin }}
+                {% for error in form.passwordLogin.errors %}
+                <span style="color: red; font-size: 12px;">{{ error }}</span>
+                {% endfor %}
+                <br>
+                {{ form.remember_me }}
+                {{ form.submitLogin(class='boton') }}
+            </div>
+        </form>
+    </div>        
+</body>
+</html>

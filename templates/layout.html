@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- ========== estilosPropios ========== -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylebarra.css') }}">    
+</head>
+<body>
+    <!-- ========== Barra ========== -->
+<body class="" id="barra">
+    <div class="" id="container">
+
+        <div class=" flex-column btn-group-vertical " role="group" aria-label="Vertical button group ">
+            <a href="">
+            <button type="button" class="btn btn-warning rounded-0 " id="logo">
+                <img src="{{ url_for('static', filename='img/logo_blanco.svg') }}"></button>
+            </a>
+
+            <a class="" href="{{url_for('login')}}">
+            <button type="button" class="btn btn-dark rounded-0" id="boton">
+                <img src="{{ url_for('static', filename='img/avatar.svg') }}"></button>
+            </a>
+
+            <a class="" href="{{url_for('registro')}}">
+            <button type="button" class="btn btn-dark rounded-0" id="boton">
+                <img src="{{ url_for('static', filename='img/formulario.svg') }}"></button>
+            </a>
+
+            <a class="" href="{{url_for('editar')}}">
+            <button type="button" class="btn btn-dark rounded-0" id="boton">
+                <img src="{{ url_for('static', filename='img/editar.svg') }}"></button>
+            </a>
+
+            <a class="" href="{{url_for('buscar')}}">
+            <button type="button" class="btn btn-dark rounded-0" id="boton">
+                <img src="{{ url_for('static', filename='img/buscar.svg') }}"></button>
+            </a>
+
+            <a class="" href="{{url_for('logout')}}">
+            <button type="button" class="btn btn-dark  rounded-0 " id="boton">
+                <img src="{{ url_for('static', filename='img/salir.svg') }}"></button>
+            </a>
+
+        </div>
+    </div>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
