@@ -1,9 +1,10 @@
 #boton {
 
-    height: 100px;
+    height: 80px;
     background-color: #F0730D;
     border: 0px;
     width: 100%;
+
 }
 
 #boton:hover {
@@ -18,23 +19,21 @@
 }
 
 #barra {
+
     background-color: #EFEFEF;
     font: normal normal bold 15px Roboto Slab;
+    width: 100%;
+    
 }
 
 #container {
+
     min-height: 100vh;
     position: fixed;
     padding-bottom: auto;
     background-color: #F0730D;
 }
 
-#registro {
-    position: absolute;
-    top: 50px;
-    left: 100px;
-    right: 10px;
-}
 
 a{
     width: 100%;

@@ -86,14 +86,14 @@ width: 172px;
 height: 143px;
 background: transparent url('/static/img/logo_color.svg') 0% 0% no-repeat padding-box;
 opacity: 1;
-margin-top: 52px;
+margin-top: 30px;
 margin: auto;
 }
 
 .label, input{
     display: block;
     width: 274px;
-    height: 53px;
+    height: 45px;
     padding: 0;
     border: 2px solid #172532;
     border-radius: 9px;
@@ -126,4 +126,18 @@ input::placeholder{
     color: gray;
     text-align: center;
     font: normal normal 300 18px/28px Roboto Slab;
+}
+
+
+
+#remember{
+    Display: flex;
+    width: 20px;
+    height: 35px;
+}
+
+#Recordar{
+    bottom: 15%;
+    position: absolute;
+    margin-left: 30px;
 }

@@ -18,6 +18,7 @@
     <div class="container">
         <div class="brand-logo"></div>
         <div class="brand-title">Ingreso de empleados</div>
+        
         <form name="logForm" id="logForm" action="" method="post" novalidate>  
             {{ form.hidden_tag() }}                   
             <div class="inputs">
@@ -25,16 +26,17 @@
                 {{ form.emailLogin }}
                 {% for error in form.emailLogin.errors %}
                 <span style="color: red; font-size: 12px;">{{ error }}</span>
-                {% endfor %} 
+                {% endfor %}
                 <br>
                 {{ form.passwordLogin.label }}
                 {{ form.passwordLogin }}
                 {% for error in form.passwordLogin.errors %}
                 <span style="color: red; font-size: 12px;">{{ error }}</span>
                 {% endfor %}
-                <br>
-                {{ form.remember_me }}
-                {{ form.submitLogin(class='boton') }}
+                <br >
+                {{ form.remember_me ( id='remember') }} 
+                {{ form.submitLogin(class_='boton') }}
+                <h5 id="Recordar">Recordar Sesión</h5>
             </div>
         </form>
     </div>        

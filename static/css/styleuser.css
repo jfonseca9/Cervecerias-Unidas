@@ -5,19 +5,16 @@
 
 .container{
     position: relative;
-    top: 95px;
+    top: 10vh;
     width: 1000px;
-    height: 500px;
+    height: 530px;
+    margin-left: 20vh;
     border-radius: 20px;
-    box-sizing: border-box;
     background-color:#FFFFFF ;
     box-shadow: 0px 3px 6px #0000003B;
-
 }
 
-#user{
-    
-    
+#user{ 
     top: 0;
     left: 0;
     width: 100%;

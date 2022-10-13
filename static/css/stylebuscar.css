@@ -60,3 +60,14 @@
     #botonactivo:hover {
         background-color: #233547;
     }
+
+table {
+    margin: 0 auto;
+}
+
+th, td, table {
+    border: 3px solid orange;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 10px;
+}

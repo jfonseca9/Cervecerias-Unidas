@@ -15,8 +15,8 @@
     <div class="container">
         <div class="brand-logo"></div>
         <form action="" method="post">
-            {{ form.hidden_tag() }} 
-            <br><br><div style="font-size: 20px; text-align: center;">Modulo de Calificación Empleados</div>                                
+            {{ form.hidden_tag() }}   
+            <br><br><div style="font-size: 20px; text-align: center;">Modulo de Cambio de ROL</div>              
             <div class="mb-3 col-12" >
                 <label  class="form-label">Correo Empleado</label>
                 {{ form.emailUser(class_="form-control") }}
@@ -28,30 +28,32 @@
         </form>
         <div class="mb-3 col-12" >
             <br>
-            {% if empleado %}
+            {% if empleado and user %}
             <table>
                 <tr>
                   <th>Nombre</th>
                   <th>Cargo</th>
                   <th>Tipo Contrato</th>
-                  <th>Email</th>
-                  <th>Calificación Desempeño</th>
+                  <th>Administrador</th>
+                  <th>SuperAdministrador</th>
+                  <th>Seleccion de Rol</th>
                 </tr>
                 <tr>
                   <td>{{ empleado.nombres }} {{ empleado.apellido }}</td>
                   <td>{{ empleado.cargo }}</td>
                   <td>{{ empleado.tipo_contrato }}</td>
-                  <td>{{ empleado.email }}</td>
+                  <td>{{ user.is_admin }}</td>
+                  <td>{{ user.is_superadmin }}</td>
                   <td>
-                    {% if empleado.calificacion == 'Sin Calificar' %}
-                        <form action="/calificar/{{ empleado.id }}" method="post">
-                            {{ form.hidden_tag() }}                   
-                            <input type="text" name="calificar">
-                            <button type="submit">Asignar</button>
+                        <form action="/cambiorol/{{ empleado.id }}" method="post">
+                            {{ form.hidden_tag() }}
+                            <select name="setrol">
+                                <option value="E">Empleado</option>
+                                <option value="A">Administrador</option>
+                                <option value="S">SuperAdministrador</option>
+                            </select>
+                            <button type="submit">Cambiar Rol</button>
                         </form>
-                    {% else %}
-                        {{ empleado.calificacion }}
-                    {% endif %}
                   </td>
                 </tr>
               </table>

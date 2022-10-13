@@ -20,66 +20,102 @@ crossorigin="anonymous"></script>
         <hr size="4px" width="100%" color="#F0730D" />
 
         <br>
-        <form class="row g-3" action="" method="post">           
+        <form class="row g-3" action="" method="post" novalidate>           
             {{ form.hidden_tag() }}
             <div class="col-md-3">
                 {{ form.nombreRegistro.label(class_="form-label") }}
                 {{ form.nombreRegistro(class_="form-control") }}
+                {% for error in form.nombreRegistro.errors %}
+                <span style="color: red; font-size: 12px;">{{ error }}</span>
+                {% endfor %}
             </div>
             
             <div class="col-md-4">
                 {{ form.apellidoRegistro.label(class_="form-label") }}
                 {{ form.apellidoRegistro(class_="form-control") }}
+                {% for error in form.apellidoRegistro.errors %}
+                <span style="color: red; font-size: 12px;">{{ error }}</span>
+                {% endfor %} 
             </div>
 
             <div class="col-md-3">
                 {{ form.fechaNacimientoRegistro.label(class_="form-label") }}
                 {{ form.fechaNacimientoRegistro(class_="form-control") }}
+                {% for error in form.fechaNacimientoRegistro.errors %}
+                <span style="color: red; font-size: 12px;">{{ error }}</span>
+                {% endfor %} 
             </div>
 
             <div class="col-md-3">
                 {{ form.ciudadRegistro.label(class_="form-label") }}
                 {{ form.ciudadRegistro(class_="form-control") }}
+                {% for error in form.ciudadRegistro.errors %}
+                <span style="color: red; font-size: 12px;">{{ error }}</span>
+                {% endfor %} 
             </div>
 
             <div class="col-md-3">
                 {{ form.departamentoRegistro.label(class_="form-label") }}
                 {{ form.departamentoRegistro(class_="form-control") }}
+                {% for error in form.departamentoRegistro.errors %}
+                <span style="color: red; font-size: 12px;">{{ error }}</span>
+                {% endfor %} 
             </div>
 
             <div class="col-md-3">
                 {{ form.paisRegistro.label(class_="form-label") }}
                 {{ form.paisRegistro(class_="form-control") }}
+                {% for error in form.paisRegistro.errors %}
+                <span style="color: red; font-size: 12px;">{{ error }}</span>
+                {% endfor %} 
             </div>
 
             <div class="col-md-4">
                 {{ form.direccionRegistro.label(class_="form-label") }}
                 {{ form.direccionRegistro(class_="form-control") }}
+                {% for error in form.direccionRegistro.errors %}
+                <span style="color: red; font-size: 12px;">{{ error }}</span>
+                {% endfor %} 
             </div>
 
             <div class="col-md-4">
                 {{ form.barrioRegistro.label(class_="form-label") }}
                 {{ form.barrioRegistro(class_="form-control") }}
+                {% for error in form.barrioRegistro.errors %}
+                <span style="color: red; font-size: 12px;">{{ error }}</span>
+                {% endfor %} 
             </div>
 
             <div class="col-md-4">
                 {{ form.estadoCivilRegistro.label(class_="form-label") }}
                 {{ form.estadoCivilRegistro(class_="form-select") }}
+                {% for error in form.estadoCivilRegistro.errors %}
+                <span style="color: red; font-size: 12px;">{{ error }}</span>
+                {% endfor %} 
             </div>
 
             <div class="col-md-4">
                 {{ form.celularRegistro.label(class_="form-label") }}
                 {{ form.celularRegistro(class_="form-control") }}
+                {% for error in form.celularRegistro.errors %}
+                <span style="color: red; font-size: 12px;">{{ error }}</span>
+                {% endfor %} 
             </div>
 
             <div class="col-md-4">
                 {{ form.emailRegister.label(class_="form-label") }}
                 {{ form.emailRegister(class_="form-control") }}
+                {% for error in form.emailRegister.errors %}
+                <span style="color: red; font-size: 12px;">{{ error }}</span>
+                {% endfor %}
             </div>
 
             <div class="col-md-4">
                 {{ form.passwordRegister.label(class_="form-label") }}
                 {{ form.passwordRegister(class_="form-control") }}
+                {% for error in form.passwordRegister.errors %}
+                <span style="color: red; font-size: 12px;">{{ error }}</span>
+                {% endfor %}
             </div>
 
             <!-- ========== Section ========== -->
@@ -89,55 +125,84 @@ crossorigin="anonymous"></script>
             <br>
             {{ form.tipoContratoRegistro.label(class_="form-label") }}
             {{ form.tipoContratoRegistro(class_="form-select") }}
+            {% for error in form.tipoContratoRegistro.errors %}
+            <span style="color: red; font-size: 12px;">{{ error }}</span>
+            {% endfor %} 
             <br><br>
 
             <!-- ========== Section ========== -->
 
             <div class="col-md-6">
                 {{ form.fechaFirmaCRegistro.label(class_="form-label") }}
-                {{ form.fechaFirmaCRegistro(class_="form-control") }}    
+                {{ form.fechaFirmaCRegistro(class_="form-control") }}
+                {% for error in form.fechaFirmaCRegistro.errors %}
+                <span style="color: red; font-size: 12px;">{{ error }}</span>
+                {% endfor %}    
             </div>
 
             <div class="col-md-6">
                 {{ form.fechaFinCRegistro.label(class_="form-label") }}
-                {{ form.fechaFinCRegistro(class_="form-control") }}    
+                {{ form.fechaFinCRegistro(class_="form-control") }}
+                {% for error in form.fechaFinCRegistro.errors %}
+                <span style="color: red; font-size: 12px;">{{ error }}</span>
+                {% endfor %}     
             </div>
 
             <div class="col-md-4">
                 {{ form.cargoRegistro.label(class_="form-label") }}
-                {{ form.cargoRegistro(class_="form-control") }}    
+                {{ form.cargoRegistro(class_="form-control") }}
+                {% for error in form.cargoRegistro.errors %}
+                <span style="color: red; font-size: 12px;">{{ error }}</span>
+                {% endfor %}     
             </div>
 
             <div class="col-md-4">
                 {{ form.areaRegistro.label(class_="form-label") }}
-                {{ form.areaRegistro(class_="form-control") }}    
+                {{ form.areaRegistro(class_="form-control") }}
+                {% for error in form.areaRegistro.errors %}
+                <span style="color: red; font-size: 12px;">{{ error }}</span>
+                {% endfor %}    
             </div>
 
             <div class="col-md-4">
                 {{ form.salarioRegistro.label(class_="form-label") }}
-                {{ form.salarioRegistro(class_="form-control") }}    
+                {{ form.salarioRegistro(class_="form-control") }}
+                {% for error in form.salarioRegistro.errors %}
+                <span style="color: red; font-size: 12px;">{{ error }}</span>
+                {% endfor %}     
             </div>
 
             <div class="col-md-4">
                 {{ form.epsRegistro.label(class_="form-label") }}
-                {{ form.epsRegistro(class_="form-control") }}    
+                {{ form.epsRegistro(class_="form-control") }}
+                {% for error in form.epsRegistro.errors %}
+                <span style="color: red; font-size: 12px;">{{ error }}</span>
+                {% endfor %}   
             </div>
 
             <div class="col-md-4">
                 {{ form.arlRegistro.label(class_="form-label") }}
-                {{ form.arlRegistro(class_="form-control") }}    
+                {{ form.arlRegistro(class_="form-control") }}
+                {% for error in form.arlRegistro.errors %}
+                <span style="color: red; font-size: 12px;">{{ error }}</span>
+                {% endfor %}     
             </div>
 
             <div class="col-md-4">
                 {{ form.pensionRegistro.label(class_="form-label") }}
-                {{ form.pensionRegistro(class_="form-control") }}    
+                {{ form.pensionRegistro(class_="form-control") }} 
+                {% for error in form.pensionRegistro.errors %}
+                <span style="color: red; font-size: 12px;">{{ error }}</span>
+                {% endfor %}    
             </div>
 
          <!-- ========== boton ========== -->
          
             <div class="col-12">
                 {{ form.submitRegister(class_="btn btn-warning") }}
-                <p style="color: red;"><strong>Error:</strong> {{ error }}
+                {% if not error=='None' %}
+                <br><p style="color: red;"><strong>Error:</strong>{{ error }}</p>
+                {% endif %}
             </div>
         </form>
         <br>
